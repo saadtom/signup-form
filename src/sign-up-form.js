@@ -16,6 +16,14 @@ const SignUpForm = () => {
     setFormSubmitted(false);
   };
 
+  const showSubmitMessage = () => {
+    if (password !== confirmPassword) {
+        return  <span className="password-match-error">Password and Confirm Password values does not match.</span>
+    } else {
+        return <span className="form-submitted ">Form Submitted</span>;
+    }  
+  }
+
   const submitForm = (event) => {
     event.preventDefault();
     setFormSubmitted(true);
@@ -51,11 +59,7 @@ const SignUpForm = () => {
           name="confirmPassword"
           required
         />
-        {formSubmitted && password !== confirmPassword ? (
-          <span className="password-match-error">
-            Password and Confirm Password values does not match.
-          </span>
-        ) : null}
+        {formSubmitted ? showSubmitMessage() : null}
         <button type="submit" className="submit-btn">
           Submit
         </button>

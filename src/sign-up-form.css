@@ -34,3 +34,7 @@
 .password-match-error {
     color: red;
 }
+
+.form-submitted {
+    color: green;
+}
