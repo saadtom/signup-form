@@ -12,7 +12,25 @@
     flex-direction: column;
 }
 
-.form-card form  input {
-    padding: 5px; 
+.form-card form input, .submit-btn {
+    padding: 10px; 
     margin: 10px auto;
+}
+
+.submit-btn {
+    background: #1888d9; 
+    color: #fff; 
+    width: 160px;
+    padding: 10px; 
+    box-sizing: none; 
+    text-transform: uppercase;
+    border: none;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+}
+
+.password-match-error {
+    color: red;
 }
